@@ -1,0 +1,1434 @@
+#include <iostream>
+# include <bits/stdc++.h>
+#include <windows.h>
+#include <ctime>
+
+using namespace std;
+
+int main()
+{
+there:
+    int lol;
+    system("cls");
+    cout << " Enter no. of rounds " << endl;
+    int i = 1;
+    cin >> lol;
+
+cleverer:
+    int a;
+    int b;
+    int c;
+    string win;
+    string jk;
+    win = "";
+    string userLockedAnswer[9] = {"1", "2", "3", "4", "5", "6", "7", "8", "9"};
+    // string array;
+here:
+    system("cls");
+
+    cout << "          Welcome to Tic Tac Toe!!! " << endl;
+    cout << "" << endl;
+    cout << "             Round: " << i << " / " << lol << endl;
+    cout << "" << endl;
+    cout << "                     " << userLockedAnswer[0] << " | " << userLockedAnswer[1] << " | " << userLockedAnswer[2] << endl;
+    // cout<<"                   -------------"<<endl;
+    cout << "                     " << userLockedAnswer[3] << " | " << userLockedAnswer[4] << " | " << userLockedAnswer[5] << endl;
+    // cout<<"                   -------------"<<endl;
+    cout << "                     " << userLockedAnswer[6] << " | " << userLockedAnswer[7] << " | " << userLockedAnswer[8] << endl;
+    cout << "" << endl;
+    cout << "          Enter your choice " << endl;
+    cin >> a;
+
+    if (a == 1 or a == 2 or a == 3 or a == 4 or a == 5 or a == 6 or a == 7 or a == 8 or a == 9)
+    {
+    }
+
+    else
+    {
+
+        cout << " Error!!! " << endl;
+        Sleep(1000);
+        goto here;
+    }
+
+    b = a - 1;
+
+    if (userLockedAnswer[b] == "X" or userLockedAnswer[b] == "O")
+    {
+
+        cout << " Error!!! ";
+        Sleep(2000);
+        goto here;
+    }
+
+    else
+    {
+
+        userLockedAnswer[b] = "X";
+
+        goto nowhere;
+    }
+
+nowhere:
+
+    system("cls");
+    cout << "          Welcome to Tic Tac Toe!!! " << endl;
+    cout << "" << endl;
+    cout << "             Round: " << i << " / " << lol << endl;
+    cout << "" << endl;
+    cout << "                     " << userLockedAnswer[0] << " | " << userLockedAnswer[1] << " | " << userLockedAnswer[2] << endl;
+    cout << "                     " << userLockedAnswer[3] << " | " << userLockedAnswer[4] << " | " << userLockedAnswer[5] << endl;
+    cout << "                     " << userLockedAnswer[6] << " | " << userLockedAnswer[7] << " | " << userLockedAnswer[8] << endl;
+    cout << "" << endl;
+
+    if (userLockedAnswer[0] == "X" and userLockedAnswer[1] == "X" and userLockedAnswer[2] == "X")
+    {
+
+        cout << " You won!!!" << endl;
+        win = "player";
+        goto everywhere;
+    }
+
+    else if (userLockedAnswer[3] == "X" and userLockedAnswer[4] == "X" and userLockedAnswer[5] == "X")
+    {
+
+        cout << " You won!!!" << endl;
+        win = "player";
+        goto everywhere;
+    }
+
+    else if (userLockedAnswer[6] == "X" and userLockedAnswer[7] == "X" and userLockedAnswer[8] == "X")
+    {
+
+        cout << " You won!!!" << endl;
+        win = "player";
+        goto everywhere;
+    }
+
+    else if (userLockedAnswer[0] == "X" and userLockedAnswer[3] == "X" and userLockedAnswer[6] == "X")
+    {
+
+        cout << " You won!!!" << endl;
+        win = "player";
+        goto everywhere;
+    }
+
+    else if (userLockedAnswer[1] == "X" and userLockedAnswer[4] == "X" and userLockedAnswer[7] == "X")
+    {
+
+        cout << " You won!!!" << endl;
+        win = "player";
+        goto everywhere;
+    }
+
+    else if (userLockedAnswer[2] == "X" and userLockedAnswer[5] == "X" and userLockedAnswer[8] == "X")
+    {
+
+        cout << " You won!!!" << endl;
+        win = "player";
+        goto everywhere;
+    }
+
+    else if (userLockedAnswer[0] == "X" and userLockedAnswer[4] == "X" and userLockedAnswer[8] == "X")
+    {
+
+        cout << " You won!!!" << endl;
+        win = "player";
+        goto everywhere;
+    }
+
+    else if (userLockedAnswer[2] == "X" and userLockedAnswer[4] == "X" and userLockedAnswer[6] == "X")
+    {
+
+        cout << " You won!!!" << endl;
+        win = "player";
+        goto everywhere;
+    }
+
+    else
+    {
+
+        win = "";
+    }
+
+    if (userLockedAnswer[0] != "1" and userLockedAnswer[1] != "2" and userLockedAnswer[2] != "3" and userLockedAnswer[3] != "4" and userLockedAnswer[4] != "5" and userLockedAnswer[5] != "6" and userLockedAnswer[6] != "7" and userLockedAnswer[7] != "8" and userLockedAnswer[8] != "9")
+    {
+        win = "Tie";
+        cout << win << endl;
+        // Sleep (2000);
+        goto everywhere;
+    }
+    else
+    {
+    }
+
+can:
+    cout << " Waiting for bot....." << endl;
+
+    Sleep(2000);
+
+    if (userLockedAnswer[0] == "O" and userLockedAnswer[1] == "O")
+    {
+
+        if (userLockedAnswer[0] == "O" and userLockedAnswer[1] == "O")
+        {
+            if (userLockedAnswer[2] == "X")
+            {
+                goto aaa;
+            }
+
+            else
+            {
+                c = 2;
+                goto stay;
+            }
+        }
+        else
+        {
+            goto aaa;
+        }
+    }
+
+    else if (userLockedAnswer[1] == "O" and userLockedAnswer[2] == "O")
+    {
+
+    aaa:
+        if (userLockedAnswer[1] == "O" and userLockedAnswer[2] == "O")
+        {
+            if (userLockedAnswer[0] == "X")
+            {
+                goto bbb;
+            }
+
+            else
+            {
+                c = 0;
+                goto stay;
+            }
+        }
+        else
+        {
+            goto bbb;
+        }
+    }
+
+    else if (userLockedAnswer[0] == "O" and userLockedAnswer[2] == "O")
+    {
+
+    bbb:
+        if (userLockedAnswer[0] == "O" and userLockedAnswer[2] == "O")
+        {
+            if (userLockedAnswer[1] == "X")
+            {
+                goto ccc;
+            }
+
+            else
+            {
+                c = 1;
+                goto stay;
+            }
+        }
+        else
+        {
+            goto ccc;
+        }
+    }
+
+    else if (userLockedAnswer[3] == "O" and userLockedAnswer[4] == "O")
+    {
+
+    ccc:
+        if (userLockedAnswer[3] == "O" and userLockedAnswer[4] == "O")
+        {
+            if (userLockedAnswer[5] == "X")
+            {
+                goto ddd;
+            }
+
+            else
+            {
+                c = 5;
+                goto stay;
+            }
+        }
+        else
+        {
+            goto ddd;
+        }
+    }
+
+    else if (userLockedAnswer[4] == "O" and userLockedAnswer[5] == "O")
+    {
+
+    ddd:
+        if (userLockedAnswer[4] == "O" and userLockedAnswer[5] == "O")
+        {
+            if (userLockedAnswer[3] == "X")
+            {
+                goto eee;
+            }
+
+            else
+            {
+                c = 3;
+                goto stay;
+            }
+        }
+        else
+        {
+            goto eee;
+        }
+    }
+
+    else if (userLockedAnswer[3] == "O" and userLockedAnswer[5] == "O")
+    {
+
+    eee:
+        if (userLockedAnswer[3] == "O" and userLockedAnswer[5] == "O")
+        {
+            if (userLockedAnswer[4] == "X")
+            {
+                goto fff;
+            }
+
+            else
+            {
+                c = 4;
+                goto stay;
+            }
+        }
+        else
+        {
+            goto fff;
+        }
+    }
+
+    else if (userLockedAnswer[6] == "O" and userLockedAnswer[7] == "O")
+    {
+
+    fff:
+        if (userLockedAnswer[6] == "O" and userLockedAnswer[7] == "O")
+        {
+            if (userLockedAnswer[8] == "X")
+            {
+                goto ggg;
+            }
+
+            else
+            {
+                c = 8;
+                goto stay;
+            }
+        }
+        else
+        {
+            goto ggg;
+        }
+    }
+
+    else if (userLockedAnswer[7] == "O" and userLockedAnswer[8] == "O")
+    {
+
+    ggg:
+        if (userLockedAnswer[7] == "O" and userLockedAnswer[8] == "O")
+        {
+            if (userLockedAnswer[6] == "X")
+            {
+                goto hhh;
+            }
+
+            else
+            {
+                c = 6;
+                goto stay;
+            }
+        }
+        else
+        {
+            goto hhh;
+        }
+    }
+
+    else if (userLockedAnswer[6] == "O" and userLockedAnswer[8] == "O")
+    {
+
+    hhh:
+        if (userLockedAnswer[6] == "O" and userLockedAnswer[8] == "O")
+        {
+            if (userLockedAnswer[7] == "X")
+            {
+                goto iii;
+            }
+
+            else
+            {
+                c = 7;
+                goto stay;
+            }
+        }
+        else
+        {
+            goto iii;
+        }
+    }
+
+    else if (userLockedAnswer[0] == "O" and userLockedAnswer[3] == "O")
+    {
+
+    iii:
+        if (userLockedAnswer[0] == "O" and userLockedAnswer[3] == "O")
+        {
+            if (userLockedAnswer[6] == "X")
+            {
+                goto jjj;
+            }
+
+            else
+            {
+                c = 6;
+                goto stay;
+            }
+        }
+        else
+        {
+            goto jjj;
+        }
+    }
+
+    else if (userLockedAnswer[3] == "O" and userLockedAnswer[6] == "O")
+    {
+
+    jjj:
+        if (userLockedAnswer[3] == "O" and userLockedAnswer[6] == "O")
+        {
+            if (userLockedAnswer[0] == "X")
+            {
+                goto kkk;
+            }
+
+            else
+            {
+                c = 0;
+                goto stay;
+            }
+        }
+        else
+        {
+            goto kkk;
+        }
+    }
+
+    else if (userLockedAnswer[0] == "O" and userLockedAnswer[6] == "O")
+    {
+
+    kkk:
+        if (userLockedAnswer[0] == "O" and userLockedAnswer[6] == "O")
+        {
+            if (userLockedAnswer[3] == "X")
+            {
+                goto lll;
+            }
+
+            else
+            {
+                c = 3;
+                goto stay;
+            }
+        }
+        else
+        {
+            goto lll;
+        }
+    }
+
+    else if (userLockedAnswer[1] == "O" and userLockedAnswer[4] == "O")
+    {
+
+    lll:
+        if (userLockedAnswer[1] == "O" and userLockedAnswer[4] == "O")
+        {
+            if (userLockedAnswer[7] == "X")
+            {
+                goto mmm;
+            }
+
+            else
+            {
+                c = 7;
+                goto stay;
+            }
+        }
+        else
+        {
+            goto mmm;
+        }
+    }
+
+    else if (userLockedAnswer[4] == "O" and userLockedAnswer[7] == "O")
+    {
+
+    mmm:
+        if (userLockedAnswer[4] == "O" and userLockedAnswer[7] == "O")
+        {
+            if (userLockedAnswer[1] == "X")
+            {
+                goto nnn;
+            }
+
+            else
+            {
+                c = 1;
+                goto stay;
+            }
+        }
+
+        else
+        {
+            goto nnn;
+        }
+    }
+
+    else if (userLockedAnswer[1] == "O" and userLockedAnswer[7] == "O")
+    {
+
+    nnn:
+        if (userLockedAnswer[1] == "O" and userLockedAnswer[7] == "O")
+        {
+            if (userLockedAnswer[4] == "X")
+            {
+                goto ooo;
+            }
+
+            else
+            {
+                c = 4;
+                goto stay;
+            }
+        }
+        else
+        {
+            goto ooo;
+        }
+    }
+
+    else if (userLockedAnswer[2] == "O" and userLockedAnswer[5] == "O")
+    {
+
+    ooo:
+        if (userLockedAnswer[2] == "O" and userLockedAnswer[5] == "O")
+        {
+            if (userLockedAnswer[8] == "X")
+            {
+                goto ppp;
+            }
+
+            else
+            {
+                c = 8;
+                goto stay;
+            }
+        }
+        else
+        {
+            goto ppp;
+        }
+    }
+
+    else if (userLockedAnswer[5] == "O" and userLockedAnswer[8] == "O")
+    {
+
+    ppp:
+        if (userLockedAnswer[5] == "O" and userLockedAnswer[8] == "O")
+        {
+            if (userLockedAnswer[2] == "X")
+            {
+                goto qqq;
+            }
+
+            else
+            {
+                c = 2;
+                goto stay;
+            }
+        }
+        else
+        {
+            goto qqq;
+        }
+    }
+
+    else if (userLockedAnswer[2] == "O" and userLockedAnswer[8] == "O")
+    {
+
+    qqq:
+        if (userLockedAnswer[2] == "O" and userLockedAnswer[8] == "O")
+        {
+            if (userLockedAnswer[5] == "X")
+            {
+                goto rrr;
+            }
+
+            else
+            {
+                c = 5;
+                goto stay;
+            }
+        }
+        else
+        {
+            goto rrr;
+        }
+    }
+
+    // Diagonal
+
+    else if (userLockedAnswer[2] == "O" and userLockedAnswer[4] == "O")
+    {
+
+    rrr:
+        if (userLockedAnswer[2] == "O" and userLockedAnswer[4] == "O")
+        {
+            if (userLockedAnswer[6] == "X")
+            {
+                goto sss;
+            }
+
+            else
+            {
+                c = 6;
+                goto stay;
+            }
+        }
+        else
+        {
+            goto sss;
+        }
+    }
+
+    else if (userLockedAnswer[4] == "O" and userLockedAnswer[6] == "O")
+    {
+
+    sss:
+        if (userLockedAnswer[4] == "O" and userLockedAnswer[6] == "O")
+        {
+            if (userLockedAnswer[2] == "X")
+            {
+                goto ttt;
+            }
+
+            else
+            {
+                c = 2;
+                goto stay;
+            }
+        }
+        else
+        {
+            goto ttt;
+        }
+    }
+
+    else if (userLockedAnswer[2] == "O" and userLockedAnswer[6] == "O")
+    {
+
+    ttt:
+        if (userLockedAnswer[2] == "O" and userLockedAnswer[6] == "O")
+        {
+            if (userLockedAnswer[4] == "X")
+            {
+                goto uuu;
+            }
+
+            else
+            {
+                c = 4;
+                goto stay;
+            }
+        }
+        else
+        {
+            goto uuu;
+        }
+    }
+
+    else if (userLockedAnswer[0] == "O" and userLockedAnswer[4] == "O")
+    {
+
+    uuu:
+        if (userLockedAnswer[0] == "O" and userLockedAnswer[4] == "O")
+        {
+            if (userLockedAnswer[8] == "X")
+            {
+                goto vvv;
+            }
+
+            else
+            {
+                c = 8;
+                goto stay;
+            }
+        }
+        else
+        {
+            goto vvv;
+        }
+    }
+
+    else if (userLockedAnswer[4] == "O" and userLockedAnswer[8] == "O")
+    {
+
+    vvv:
+        if (userLockedAnswer[4] == "O" and userLockedAnswer[8] == "O")
+        {
+            if (userLockedAnswer[0] == "X")
+            {
+                goto www;
+            }
+
+            else
+            {
+                c = 0;
+                goto stay;
+            }
+        }
+        else
+        {
+            goto www;
+        }
+    }
+
+    else if (userLockedAnswer[0] == "O" and userLockedAnswer[8] == "O")
+    {
+
+    www:
+        if (userLockedAnswer[0] == "O" and userLockedAnswer[8] == "O")
+        {
+            if (userLockedAnswer[4] == "X")
+            {
+                goto xxx;
+            }
+            else
+            {
+                c = 4;
+                goto stay;
+            }
+        }
+        else
+        {
+            goto xxx;
+        }
+    }
+    else
+    {
+    }
+
+    // Defence -------->
+
+    // Across -------->
+
+    if (userLockedAnswer[0] == "X" and userLockedAnswer[1] == "X")
+    {
+    xxx:
+        if (userLockedAnswer[0] == "X" and userLockedAnswer[1] == "X")
+        {
+            if (userLockedAnswer[2] == "O")
+            {
+                goto aa;
+            }
+
+            else
+            {
+                c = 2;
+                goto stay;
+            }
+        }
+        else
+        {
+            goto aa;
+        }
+    }
+
+    else if (userLockedAnswer[1] == "X" and userLockedAnswer[2] == "X")
+    {
+
+    aa:
+        if (userLockedAnswer[1] == "X" and userLockedAnswer[2] == "X")
+        {
+            if (userLockedAnswer[0] == "O")
+            {
+                goto bb;
+            }
+
+            else
+            {
+                c = 0;
+                goto stay;
+            }
+        }
+        else
+        {
+            goto bb;
+        }
+    }
+
+    else if (userLockedAnswer[0] == "X" and userLockedAnswer[2] == "X")
+    {
+
+    bb:
+        if (userLockedAnswer[0] == "X" and userLockedAnswer[2] == "X")
+        {
+            if (userLockedAnswer[1] == "O")
+            {
+                goto cc;
+            }
+
+            else
+            {
+                c = 1;
+                goto stay;
+            }
+        }
+        else
+        {
+            goto cc;
+        }
+    }
+
+    else if (userLockedAnswer[3] == "X" and userLockedAnswer[4] == "X")
+    {
+
+    cc:
+        if (userLockedAnswer[3] == "X" and userLockedAnswer[4] == "X")
+        {
+            if (userLockedAnswer[5] == "O")
+            {
+                goto dd;
+            }
+
+            else
+            {
+                c = 5;
+                goto stay;
+            }
+        }
+        else
+        {
+            goto dd;
+        }
+    }
+
+    else if (userLockedAnswer[4] == "X" and userLockedAnswer[5] == "X")
+    {
+
+    dd:
+        if (userLockedAnswer[4] == "X" and userLockedAnswer[5] == "X")
+        {
+            if (userLockedAnswer[3] == "O")
+            {
+                goto ee;
+            }
+
+            else
+            {
+                c = 3;
+                goto stay;
+            }
+        }
+        else
+        {
+            goto ee;
+        }
+    }
+
+    else if (userLockedAnswer[3] == "X" and userLockedAnswer[5] == "X")
+    {
+
+    ee:
+        if (userLockedAnswer[3] == "X" and userLockedAnswer[5] == "X")
+        {
+            if (userLockedAnswer[4] == "O")
+            {
+                goto ff;
+            }
+
+            else
+            {
+                c = 4;
+                goto stay;
+            }
+        }
+        else
+        {
+            goto ff;
+        }
+    }
+
+    else if (userLockedAnswer[6] == "X" and userLockedAnswer[7] == "X")
+    {
+
+    ff:
+        if (userLockedAnswer[6] == "X" and userLockedAnswer[7] == "X")
+        {
+            if (userLockedAnswer[8] == "O")
+            {
+                goto gg;
+            }
+
+            else
+            {
+                c = 8;
+                goto stay;
+            }
+        }
+        else
+        {
+            goto gg;
+        }
+    }
+
+    else if (userLockedAnswer[7] == "X" and userLockedAnswer[8] == "X")
+    {
+
+    gg:
+        if (userLockedAnswer[7] == "X" and userLockedAnswer[8] == "X")
+        {
+            if (userLockedAnswer[6] == "O")
+            {
+                goto hh;
+            }
+
+            else
+            {
+                c = 6;
+                goto stay;
+            }
+        }
+        else
+        {
+            goto hh;
+        }
+    }
+
+    else if (userLockedAnswer[6] == "X" and userLockedAnswer[8] == "X")
+    {
+
+    hh:
+        if (userLockedAnswer[6] == "X" and userLockedAnswer[8] == "X")
+        {
+            if (userLockedAnswer[7] == "O")
+            {
+                goto ii;
+            }
+
+            else
+            {
+                c = 7;
+                goto stay;
+            }
+        }
+        else
+        {
+            goto ii;
+        }
+    }
+
+    // Down ------->
+
+    else if (userLockedAnswer[0] == "X" and userLockedAnswer[3] == "X")
+    {
+
+    ii:
+        if (userLockedAnswer[0] == "X" and userLockedAnswer[3] == "X")
+        {
+            if (userLockedAnswer[6] == "O")
+            {
+                goto jj;
+            }
+
+            else
+            {
+                c = 6;
+                goto stay;
+            }
+        }
+        else
+        {
+            goto jj;
+        }
+    }
+
+    else if (userLockedAnswer[3] == "X" and userLockedAnswer[6] == "X")
+    {
+
+    jj:
+        if (userLockedAnswer[3] == "X" and userLockedAnswer[6] == "X")
+        {
+            if (userLockedAnswer[0] == "O")
+            {
+                goto kk;
+            }
+
+            else
+            {
+                c = 0;
+                goto stay;
+            }
+        }
+        else
+        {
+            goto kk;
+        }
+    }
+
+    else if (userLockedAnswer[0] == "X" and userLockedAnswer[6] == "X")
+    {
+
+    kk:
+        if (userLockedAnswer[0] == "X" and userLockedAnswer[6] == "X")
+        {
+            if (userLockedAnswer[3] == "O")
+            {
+                goto ll;
+            }
+
+            else
+            {
+                c = 3;
+                goto stay;
+            }
+        }
+        else
+        {
+            goto ll;
+        }
+    }
+
+    else if (userLockedAnswer[1] == "X" and userLockedAnswer[4] == "X")
+    {
+
+    ll:
+        if (userLockedAnswer[1] == "X" and userLockedAnswer[4] == "X")
+        {
+            if (userLockedAnswer[7] == "O")
+            {
+                goto mm;
+            }
+
+            else
+            {
+                c = 7;
+                goto stay;
+            }
+        }
+        else
+        {
+            goto mm;
+        }
+    }
+
+    else if (userLockedAnswer[4] == "X" and userLockedAnswer[7] == "X")
+    {
+
+    mm:
+        if (userLockedAnswer[4] == "X" and userLockedAnswer[7] == "X")
+        {
+            if (userLockedAnswer[1] == "O")
+            {
+                goto nn;
+            }
+
+            else
+            {
+                c = 1;
+                goto stay;
+            }
+        }
+
+        else
+        {
+            goto nn;
+        }
+    }
+
+    else if (userLockedAnswer[1] == "X" and userLockedAnswer[7] == "X")
+    {
+
+    nn:
+        if (userLockedAnswer[1] == "X" and userLockedAnswer[7] == "X")
+        {
+            if (userLockedAnswer[4] == "O")
+            {
+                goto oo;
+            }
+
+            else
+            {
+                c = 4;
+                goto stay;
+            }
+        }
+        else
+        {
+            goto oo;
+        }
+    }
+
+    else if (userLockedAnswer[2] == "X" and userLockedAnswer[5] == "X")
+    {
+
+    oo:
+        if (userLockedAnswer[2] == "X" and userLockedAnswer[5] == "X")
+        {
+            if (userLockedAnswer[8] == "O")
+            {
+                goto pp;
+            }
+
+            else
+            {
+                c = 8;
+                goto stay;
+            }
+        }
+        else
+        {
+            goto pp;
+        }
+    }
+
+    else if (userLockedAnswer[5] == "X" and userLockedAnswer[8] == "X")
+    {
+
+    pp:
+        if (userLockedAnswer[5] == "X" and userLockedAnswer[8] == "X")
+        {
+            if (userLockedAnswer[2] == "O")
+            {
+                goto qq;
+            }
+
+            else
+            {
+                c = 2;
+                goto stay;
+            }
+        }
+        else
+        {
+            goto qq;
+        }
+    }
+
+    else if (userLockedAnswer[2] == "X" and userLockedAnswer[8] == "X")
+    {
+
+    qq:
+        if (userLockedAnswer[2] == "X" and userLockedAnswer[8] == "X")
+        {
+            if (userLockedAnswer[5] == "O")
+            {
+                goto rr;
+            }
+
+            else
+            {
+                c = 5;
+                goto stay;
+            }
+        }
+        else
+        {
+            goto rr;
+        }
+    }
+
+    // Diagonal -------->
+
+    else if (userLockedAnswer[2] == "X" and userLockedAnswer[4] == "X")
+    {
+
+    rr:
+        if (userLockedAnswer[2] == "X" and userLockedAnswer[4] == "X")
+        {
+            if (userLockedAnswer[6] == "O")
+            {
+                goto ss;
+            }
+
+            else
+            {
+                c = 6;
+                goto stay;
+            }
+        }
+        else
+        {
+            goto ss;
+        }
+    }
+
+    else if (userLockedAnswer[4] == "X" and userLockedAnswer[6] == "X")
+    {
+
+    ss:
+        if (userLockedAnswer[4] == "X" and userLockedAnswer[6] == "X")
+        {
+            if (userLockedAnswer[2] == "O")
+            {
+                goto tt;
+            }
+
+            else
+            {
+                c = 2;
+                goto stay;
+            }
+        }
+        else
+        {
+            goto tt;
+        }
+    }
+
+    else if (userLockedAnswer[2] == "X" and userLockedAnswer[6] == "X")
+    {
+
+    tt:
+        if (userLockedAnswer[2] == "X" and userLockedAnswer[6] == "X")
+        {
+            if (userLockedAnswer[4] == "O")
+            {
+                goto uu;
+            }
+
+            else
+            {
+                c = 4;
+                goto stay;
+            }
+        }
+        else
+        {
+            goto uu;
+        }
+    }
+
+    else if (userLockedAnswer[0] == "X" and userLockedAnswer[4] == "X")
+    {
+
+    uu:
+        if (userLockedAnswer[0] == "X" and userLockedAnswer[4] == "X")
+        {
+            if (userLockedAnswer[8] == "O")
+            {
+                goto vv;
+            }
+
+            else
+            {
+                c = 8;
+                goto stay;
+            }
+        }
+        else
+        {
+            goto vv;
+        }
+    }
+
+    else if (userLockedAnswer[4] == "X" and userLockedAnswer[8] == "X")
+    {
+
+    vv:
+        if (userLockedAnswer[4] == "X" and userLockedAnswer[8] == "X")
+        {
+            if (userLockedAnswer[0] == "O")
+            {
+                goto ww;
+            }
+
+            else
+            {
+                c = 0;
+                goto stay;
+            }
+        }
+        else
+        {
+            goto ww;
+        }
+    }
+
+    else if (userLockedAnswer[0] == "X" and userLockedAnswer[8] == "X")
+    {
+
+    ww:
+        if (userLockedAnswer[0] == "X" and userLockedAnswer[8] == "X")
+        {
+            if (userLockedAnswer[4] == "O")
+            {
+                goto xx;
+            }
+
+            else
+            {
+                c = 4;
+                goto stay;
+            }
+        }
+        else
+        {
+            goto xx;
+        }
+    }
+
+    else
+    {
+    }
+
+xx:
+    srand(time(0));
+
+    do
+    {
+
+        if (userLockedAnswer[4] != "X" and userLockedAnswer[4] != "O")
+        {
+            c = 4;
+            goto stay;
+        }
+        else
+        {
+        }
+        c = (rand() % 8);
+
+    } while (userLockedAnswer[c] == "X" or userLockedAnswer[c] == "O");
+    goto stay;
+
+stay:
+    userLockedAnswer[c] = "O";
+    system("cls");
+    cout << "          Welcome to Tic Tac Toe!!! " << endl;
+    cout << "" << endl;
+    cout << "             Round: " << i << " / " << lol << endl;
+    cout << "" << endl;
+    cout << "                     " << userLockedAnswer[0] << " | " << userLockedAnswer[1] << " | " << userLockedAnswer[2] << endl;
+    cout << "                     " << userLockedAnswer[3] << " | " << userLockedAnswer[4] << " | " << userLockedAnswer[5] << endl;
+    cout << "                     " << userLockedAnswer[6] << " | " << userLockedAnswer[7] << " | " << userLockedAnswer[8] << endl;
+    cout << "" << endl;
+
+    if (userLockedAnswer[0] == "O" and userLockedAnswer[1] == "O" and userLockedAnswer[2] == "O")
+    {
+
+        cout << " You lost...." << endl;
+        win = "bot";
+        goto everywhere;
+    }
+
+    else if (userLockedAnswer[3] == "O" and userLockedAnswer[4] == "O" and userLockedAnswer[5] == "O")
+    {
+
+        cout << " You lost...." << endl;
+        win = "bot";
+        goto everywhere;
+    }
+
+    else if (userLockedAnswer[6] == "O" and userLockedAnswer[7] == "O" and userLockedAnswer[8] == "O")
+    {
+
+        cout << " You lost...." << endl;
+        win = "bot";
+        goto everywhere;
+    }
+
+    else if (userLockedAnswer[0] == "O" and userLockedAnswer[3] == "O" and userLockedAnswer[6] == "O")
+    {
+
+        cout << " You lost...." << endl;
+        win = "bot";
+        goto everywhere;
+    }
+
+    else if (userLockedAnswer[1] == "O" and userLockedAnswer[4] == "O" and userLockedAnswer[7] == "O")
+    {
+
+        cout << " You lost...." << endl;
+        win = "bot";
+        goto everywhere;
+    }
+
+    else if (userLockedAnswer[2] == "O" and userLockedAnswer[5] == "O" and userLockedAnswer[8] == "O")
+    {
+
+        cout << " You lost...." << endl;
+        win = "bot";
+        goto everywhere;
+    }
+
+    else if (userLockedAnswer[0] == "O" and userLockedAnswer[4] == "O" and userLockedAnswer[8] == "O")
+    {
+
+        cout << " You lost...." << endl;
+        win = "bot";
+        goto everywhere;
+    }
+
+    else if (userLockedAnswer[2] == "O" and userLockedAnswer[4] == "O" and userLockedAnswer[6] == "O")
+    {
+
+        cout << " You lost...." << endl;
+        win = "bot";
+        goto everywhere;
+    }
+
+    else
+    {
+
+        win = "";
+        goto here;
+    }
+
+everywhere:
+    Sleep(3000);
+    i++;
+    if (i < lol or i == lol)
+    {
+        goto cleverer;
+    }
+    else
+    {
+        goto literally;
+    }
+
+literally:
+    string o;
+    cout << " Do you want to play again? " << endl;
+    cin >> o;
+    system("cls");
+
+    // for (int slightly = 1; slightly <= strlen(o); slightly++)
+    // {
+    //      if(o[slightly]>=65 and o[slightly]<=92)
+    //       {
+
+    // 	  o[slightly] = o[slightly]+32;
+
+    //       }
+    // }
+
+    cout << o << endl;
+
+    if (o == "y" or o == "yes" or o == "yep" or o == "yeah" or o == "sure" or o == "probably" or o == "Yes")
+    {
+
+        goto there;
+    }
+
+    else
+    {
+        cout << " " << endl;
+    }
+
+    return 0;
+}
